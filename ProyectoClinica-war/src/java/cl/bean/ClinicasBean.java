@@ -33,6 +33,30 @@ public class ClinicasBean {
     private String nombreClinica;
     private String ubicacionClinica;
     private Ciudad ciudad;
+
+    public String getNombreClinica() {
+        return nombreClinica;
+    }
+
+    public void setNombreClinica(String nombreClinica) {
+        this.nombreClinica = nombreClinica;
+    }
+
+    public String getUbicacionClinica() {
+        return ubicacionClinica;
+    }
+
+    public void setUbicacionClinica(String ubicacionClinica) {
+        this.ubicacionClinica = ubicacionClinica;
+    }
+
+    public Ciudad getCiudad() {
+        return ciudad;
+    }
+
+    public void setCiudad(Ciudad ciudad) {
+        this.ciudad = ciudad;
+    }
     
     
     public ClinicasBean() {
@@ -48,7 +72,7 @@ public class ClinicasBean {
         objClinica.setUbicacionClinica(ubicacionClinica);
         objClinica.setCodigoCiudad(ciudadFacade.find(ciudad.getCodigoCiudad()));
         clinicasFacade.create(objClinica);
-        return "clinicas";
+        return "Listar.xhtml";
     }
     
 }
