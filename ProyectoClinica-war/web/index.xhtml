@@ -8,7 +8,9 @@
         <title>Facelet Title</title>
     </h:head>
     <h:body>
+      
         <!--javier harà menu y carrusel  test adolfo-->
+        <div id="menuBar">
         <h:form>
             <p:growl id="messages"/>
             <p:menubar>
@@ -25,26 +27,18 @@
                 </p:submenu>
 
                 <p:menuitem value="Salir" url="simular.xhtml" icon="ui-icon-close" />
-
-                <f:facet name="opciones">
-                    <p:inputText style="margin-right:10px" placeholder="Buscar"/>
-                    <p:commandButton type="button" value="Logout" icon="ui-icon-extlink" />
-                </f:facet>
             </p:menubar>
         </h:form>
-
+    </div>
+        
         <p:galleria value="#{imagesView.images}" var="image" panelWidth="500" panelHeight="313" showCaption="true">
-            <p:graphicImage name="resource/images/#{image}" alt="Image Description for #{image}" title="#{image}"/>
+            <p:graphicImage name="/resource/images/#{image}" alt="Image Description for #{image}" title="#{image}"/>
+           
         </p:galleria>
 
-        <h3>Zoom</h3>
-        <p:imageSwitch effect="zoom">
-            <ui:repeat value="#{imagesView.images}" var="image">
-                <p:graphicImage name="/resource/images/#{image}" />
-            </ui:repeat>
-        </p:imageSwitch>
 
-
+        <img src="resource/images/foto1.jpg" alt=""/>
+        
     </h:body>
 </html>
 
