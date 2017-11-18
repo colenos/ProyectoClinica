@@ -4,3 +4,6 @@
 /ProyectoClinica-ejb/build/
 /ProyectoClinica-ejb/dist/
 /ProyectoClinica-war/build/
+/build/
+/dist/
+/ProyectoClinica-war/dist/
