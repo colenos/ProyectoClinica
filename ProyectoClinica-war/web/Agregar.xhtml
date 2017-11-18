@@ -8,6 +8,8 @@
         <title>Agregar Clinicas</title>
     </h:head>
     <h:body>
+         <h:outputText value="Nombre Clinica: " />
+         <p:inputText value="#{clinicasBean.ciudad.clinicasList}" required="true"/>
         <h:form id="fc">
             <p:growl id="msg" />
             <h:panelGrid columns="2">
