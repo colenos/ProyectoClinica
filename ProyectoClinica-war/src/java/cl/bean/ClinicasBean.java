@@ -75,4 +75,5 @@ public class ClinicasBean {
         return "Listar.xhtml";
     }
     
+    
 }

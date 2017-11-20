@@ -16,34 +16,56 @@
     <h:body>
         
         
-        <h:form>  
+        <h:form> 
+            <p:button outcome="index" value="Volver" icon="ui-icon-star">
+            </p:button>
+            <div>
+                <img src="resource/images/urgencias.jpg" alt=""/>
+            </div>
             <p:gmap id="gmap" center="-33.0402663,-71.5091947" zoom="12" type="HYBRID" model="#{infoWindowView.advancedModel}" style="width: 100%;height: 400px" >
                 <p:ajax event="overlaySelect" listener="#{infoWindowView.onMarkerSelect}"/>
                 <p:gmapInfoWindow id="infoWindow">
                     <p:outputPanel style="text-align: center; display: block; margin: auto">
+                        <h:outputText value="#{infoWindowView.marker.title}" />
+                        
+                        <p:dataTable var="c" value="#{categoriaBean.categoria}" sortBy="#{c.c1}">
+                             <p:column headerText="Nombre Clinica">
+                                 <h:outputText value="#{c.codigoClinica.nombreClinica}" />
+                            </p:column>
+                            <p:column headerText="C1">
+                             <h:outputText value="#{c.c1}" />
+                            </p:column>
  
-                        <p:graphicImage name="/resource/images/#{infoWindowView.marker.data}" height="150" />
+                            <p:column headerText="C2">
+                             <h:outputText value="#{c.c2}" />
+                            </p:column>
+ 
+                             <p:column headerText="C3">
+                               <h:outputText value="#{c.c3}" />
+                            </p:column>
+                            <p:column headerText="C4">
+                            <h:outputText value="#{c.c4}" />
+                            </p:column>
+                            <p:column headerText="C5">
+                              <h:outputText value="#{c.c5}" />
+                            </p:column>
+                           </p:dataTable>
+                         
                     <br />
-                    <h:outputText value="#{infoWindowView.marker.title}" />
+                    <p:button outcome="index" value="Inicio" icon="ui-icon-star">
+                          
+                        </p:button>
+                    
  
-            </p:outputPanel>
+                    </p:outputPanel>
                     
                 </p:gmapInfoWindow>
             </p:gmap>
             
-            <!-- Preload for demo -->
-            <p:outputPanel style="display:none">
-            <p:graphicImage name="resource/images/cvalpo.jpg" />
             
-            <p:graphicImage name="resource/images/ccdelmar.jpg" />
-            <p:graphicImage name="resource/images/crenaca.jpg" />
-            <p:graphicImage name="resource/images/hclinico.jpg" />
-            <p:graphicImage name="resource/images/closcarrera.jpg" />
-            <p:graphicImage name="resource/images/cvillaalemana.jpg" />
-    </p:outputPanel>
         </h:form>
         
-        
+         
         
     </h:body>
 </html>

@@ -36,11 +36,24 @@ public class CategoriaBean {
     private int c5;
     private Clinicas clinicas;
     
+    public static String categoriasClinicaValpo(){
+        Categoria mostrar = new Categoria();
+        String m= null;
+        
+            
+            m = "Categoría C1 = " +mostrar.getC1() + "Codigo = " +mostrar.getCodigoClinica().toString();
+        
+        return m;
+    }
     public CategoriaBean() {
         clinicas = new Clinicas();
     }
     public List<Categoria> getCategoria(){
         return categoriaFacade.findAll();
+    }
+    
+    public Categoria buscarClinica(int codigo){
+        return categoriaFacade.find(codigo);
     }
     public String crearCategoria(){
         Categoria c = new Categoria();
