@@ -41,12 +41,12 @@ public class InfoWindowView implements Serializable{
           
         //Icons and Data
         
-        advancedModel.addOverlay(new Marker(coord1, "Clínica Valparaíso, Brasil 2350, Valparaíso", "cvalpo.jpg", "http://maps.google.com/mapfiles/ms/micons/blue-dot.png","www.clinicavalparaiso.cl"));
-        advancedModel.addOverlay(new Marker(coord2, "Clínica Ciudad del Mar, 13 Nte. 635, Viña del Mar", "ccdelmar.jpg","http://maps.google.com/mapfiles/ms/micons/pink-dot.png","2"));
-        advancedModel.addOverlay(new Marker(coord3, "Clínica Reñaca, Anabaena 336, Viña del Mar", "crenaca.jpg", "http://maps.google.com/mapfiles/ms/micons/yellow-dot.png","3"));
-        advancedModel.addOverlay(new Marker(coord4, "Hospital Clínico de Viña del Mar, Limache 1741, Viña del Mar", "hclinico.jpg", "http://maps.google.com/mapfiles/ms/micons/green-dot.png","4"));
-        advancedModel.addOverlay(new Marker(coord5, "Clínica Los Carrera, Caupolicán 958, Quilpué", "closcarrera.jpg", "http://maps.google.com/mapfiles/ms/micons/orange-dot.png","5"));
-        advancedModel.addOverlay(new Marker(coord6, "Clínica Villa Alemana, Avenida Valparaíso 1209, Villa Alemana", "cvillaalemana.jpg", "http://maps.google.com/mapfiles/ms/micons/red-dot.png","6"));
+        advancedModel.addOverlay(new Marker(coord1, "Clínica Valparaíso, Brasil 2350, Valparaíso", "cvalpo.jpg", "http://maps.google.com/mapfiles/ms/micons/blue-dot.png"));
+        advancedModel.addOverlay(new Marker(coord2, "Clínica Ciudad del Mar, 13 Nte. 635, Viña del Mar", "ccdelmar.jpg","http://maps.google.com/mapfiles/ms/micons/pink-dot.png"));
+        advancedModel.addOverlay(new Marker(coord3, "Clínica Reñaca, Anabaena 336, Viña del Mar", "crenaca.jpg", "http://maps.google.com/mapfiles/ms/micons/yellow-dot.png"));
+        advancedModel.addOverlay(new Marker(coord4, "Hospital Clínico de Viña del Mar, Limache 1741, Viña del Mar", "hclinico.jpg", "http://maps.google.com/mapfiles/ms/micons/green-dot.png"));
+        advancedModel.addOverlay(new Marker(coord5, "Clínica Los Carrera, Caupolicán 958, Quilpué", "closcarrera.jpg", "http://maps.google.com/mapfiles/ms/micons/orange-dot.png"));
+        advancedModel.addOverlay(new Marker(coord6, "Clínica Villa Alemana, Avenida Valparaíso 1209, Villa Alemana", "cvillaalemana.jpg", "http://maps.google.com/mapfiles/ms/micons/red-dot.png"));
         
     }
     

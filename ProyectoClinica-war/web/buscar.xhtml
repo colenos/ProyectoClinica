@@ -20,14 +20,18 @@
             <p:button outcome="index" value="Volver" icon="ui-icon-star">
             </p:button>
             <div>
-                <img src="resource/images/urgencias.jpg" alt=""/>
+                <img src="resources/images/urgencias.jpg" alt=""/>
             </div>
             <p:gmap id="gmap" center="-33.0402663,-71.5091947" zoom="12" type="HYBRID" model="#{infoWindowView.advancedModel}" style="width: 100%;height: 400px" >
                 <p:ajax event="overlaySelect" listener="#{infoWindowView.onMarkerSelect}"/>
                 <p:gmapInfoWindow id="infoWindow">
                     <p:outputPanel style="text-align: center; display: block; margin: auto">
-                        <h:outputText value="#{infoWindowView.marker.title}" />
                         
+                        <h:outputText value="#{infoWindowView.marker.title}" />
+                        <br />
+                        <p:graphicImage library="images" name="#{infoWindowView.marker.data}" height="100"/>
+                        <p:graphicImage library="images" name="foto2.jpg" height="120" />
+                    <br />
                         <p:dataTable var="c" value="#{categoriaBean.categoria}" sortBy="#{c.c1}">
                              <p:column headerText="Nombre Clinica">
                                  <h:outputText value="#{c.codigoClinica.nombreClinica}" />
