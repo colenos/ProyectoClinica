@@ -8,37 +8,36 @@
         <title>Facelet Title</title>
     </h:head>
     <h:body>
-      
-        <!--javier harà menu y carrusel  test adolfo-->
+
         <div id="menuBar">
-        <h:form>
-            <p:growl id="messages"/>
-            <p:menubar>
-                <p:submenu label="Menu" icon="ui-icon-document">
-                    <p:menuitem value="Agregar" url="/faces/agregar.xhtml" icon="ui-icon-document"/>
-                    <p:separator />
-                    <p:menuitem value="Buscar" url="/faces/buscar.xhtml" icon="ui-icon-document"/>
-                    <p:separator />
-                    <p:menuitem value="Listar" url="/faces/listar.xhtml" icon="ui-icon-document"/>
-                    <p:separator />
-                    <p:menuitem value="Simular" url="/faces/simular.xhtml" icon="ui-icon-document"/>
-                    <p:separator />
-                    <p:menuitem value="Salir" url="/faces/index.xhtml" icon="ui-icon-document"/>
-                </p:submenu>
+            <h:form>
+                <p:growl id="messages"/>
+                <p:menubar>
+                    <p:submenu label="Menu" icon="ui-icon-document">
+                        <p:menuitem value="Agregar" url="/faces/agregar.xhtml" icon="ui-icon-document"/>
+                        <p:separator />
+                        <p:menuitem value="Buscar" url="/faces/buscar.xhtml" icon="ui-icon-document"/>
+                        <p:separator />
+                        <p:menuitem value="Listar" url="/faces/listar.xhtml" icon="ui-icon-document"/>
+                        <p:separator />
+                        <p:menuitem value="Simular" url="/faces/simular.xhtml" icon="ui-icon-document"/>
+                        <p:separator />
+                        <p:menuitem value="Salir" url="/faces/index.xhtml" icon="ui-icon-document"/>
+                    </p:submenu>
 
-                <p:menuitem value="Salir" url="/faces/simular.xhtml" icon="ui-icon-close" />
-            </p:menubar>
-        </h:form>
-    </div>
+                    <p:menuitem value="Salir" url="/faces/simular.xhtml" icon="ui-icon-close" />
+                </p:menubar>
+            </h:form>
+        </div>
+        <img src="resource/images/foto3.jpg" alt=""/>
         
-        <p:galleria value="#{imagesView.images}" var="image" panelWidth="500" panelHeight="313" showCaption="true">
-            <p:graphicImage name="/resource/images/#{image}" alt="Image Description for #{image}" title="#{image}"/>
-           
-        </p:galleria>
+        <div>
+            <p:galleria value="#{imagesView.images}" var="image" panelWidth="500" panelHeight="313" showCaption="true">
+                <p:graphicImage name="resource/images/#{image}" alt="Image Description for #{image}" title="#{image}"/>
+            </p:galleria>
 
-
-        <img src="resource/images/foto1.jpg" alt=""/>
-        
+        </div>
+ 
     </h:body>
 </html>
 
