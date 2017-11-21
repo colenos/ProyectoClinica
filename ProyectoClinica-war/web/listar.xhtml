@@ -6,8 +6,11 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
         <title>Facelet Title</title>
+        <style>
+            .Bimage{background-image: url("resources/images/background.jpg");}
+        </style>
     </h:head>
-    <h:body>
+    <h:body styleClass="Bimage">
         
         <h1>Listado de Clinicas y Categorías</h1>
         <h:form>
@@ -16,7 +19,7 @@
             <div>
                 <img src="resources/images/foto6.jpg" height="200"/>
             </div>
-                        <p:dataTable var="c" value="#{categoriaBean.categoria}" sortBy="#{c.c1}">
+            <p:dataTable var="c" value="#{categoriaBean.categoria}" paginator="true">
                              <p:column headerText="Ciudad">
                                  <h:outputText value="#{c.codigoClinica.codigoCiudad.nombreCiudad}" />
                             </p:column>

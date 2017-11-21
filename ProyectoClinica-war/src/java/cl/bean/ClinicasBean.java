@@ -15,6 +15,8 @@ import java.util.List;
 import javax.ejb.EJB;
 import javax.inject.Named;
 import javax.enterprise.context.RequestScoped;
+import javax.faces.application.FacesMessage;
+import javax.faces.context.FacesContext;
 
 /**
  *
@@ -72,7 +74,9 @@ public class ClinicasBean {
         objClinica.setUbicacionClinica(ubicacionClinica);
         objClinica.setCodigoCiudad(ciudadFacade.find(ciudad.getCodigoCiudad()));
         clinicasFacade.create(objClinica);
-        return "Listar.xhtml";
+        FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Clinica creada!!"));
+        return "listar";
+        
     }
     
     

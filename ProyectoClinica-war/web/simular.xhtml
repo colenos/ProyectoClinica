@@ -1,12 +1,51 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    
     <h:head>
-        <title>Facelet Title</title>
+        <title>Simulación</title>
+          <style>
+            .Bimage{background-image: url("resources/images/background.jpg");}
+        </style>
     </h:head>
-    <h:body>
-        Hello from Facelets
+    <h:body styleClass="Bimage">
+        <h1>Simulación Criticidad Pacientes por Clínicas</h1>
+        <h:form>
+            <p:button outcome="index" value="Volver" icon="ui-icon-star">
+            </p:button>
+            <div>
+                <img src="resources/images/foto5.jpg" height="200"/>
+            </div>
+            <p:dataTable var="c" value="#{categoriaBean.categoria}"  paginator="true">
+                             
+                            <p:column headerText="Nombre Clinica">
+                                 <h:outputText value="#{c.codigoClinica.nombreClinica}" />
+                            </p:column>
+                            <p:column headerText="C1">
+                             <h:outputText value="#{c.c1}" />
+                            </p:column>
+ 
+                            <p:column headerText="C2">
+                             <h:outputText value="#{c.c2}" />
+                            </p:column>
+ 
+                             <p:column headerText="C3">
+                               <h:outputText value="#{c.c3}" />
+                            </p:column>
+                            <p:column headerText="C4">
+                            <h:outputText value="#{c.c4}" />
+                            </p:column>
+                            <p:column headerText="C5">
+                              <h:outputText value="#{c.c5}" />
+                            </p:column>
+                           </p:dataTable>
+                         
+                    <br />
+                    
+        </h:form>
+      
     </h:body>
 </html>
 

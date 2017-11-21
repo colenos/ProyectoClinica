@@ -5,9 +5,12 @@
       xmlns:p="http://primefaces.org/ui"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
-        <title>Agregar Clinicas</title>
+        <title>Agregar Ciudad, Clinicas y Categoría</title>
+        <style>
+            .Bimage{background-image: url("resources/images/background.jpg");}
+        </style>
     </h:head>
-    <h:body>
+    <h:body styleClass="Bimage">
         <p:button outcome="index" value="Volver" icon="ui-icon-star">
             </p:button>
             <div>
@@ -23,10 +26,11 @@
                 <h:outputText value="Dirección Clinica: " />
                 <p:inputText value="#{clinicasBean.ubicacionClinica}" required="true"/>
                 <h:outputText value="Ubicacion Clinica: " />
-                <p:selectOneMenu value="#{clinicasBean.ciudad.nombreCiudad}">
+                <p:selectOneMenu value="#{clinicasBean.ciudad.codigoCiudad}">
                     <f:selectItems value="#{ciudadBean.ciudad}" var="c" 
                                    itemLabel="#{c.nombreCiudad}" itemValue="#{c.codigoCiudad}"/>
                 </p:selectOneMenu>
+                
                 <br></br>
                 <p:commandButton actionListener="#{clinicasBean.crearClinicas()}" value="Guardar " update=":fc:msg"/>
             </h:panelGrid>
